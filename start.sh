@@ -17,10 +17,10 @@ while getopts i:g:gp: flag; do
   esac
 done
 
-F_PATH="${FOLDER}/me-riag-sharedvar-1.0-SNAPSHOT_${ID}.jar"
+F_PATH="${FOLDER}/DC-asgn2-1.0-SNAPSHOT_${ID}.jar"
 
 # copy main file
-cp "${FOLDER}/me-riag-sharedvar-1.0-SNAPSHOT.jar" "${F_PATH}"
+cp "${FOLDER}/DC-asgn2-1.0-SNAPSHOT.jar" "${F_PATH}"
 
 # run
 if test -z "${GW}"; then
