@@ -8,11 +8,12 @@ GW=""
 GWP="2010"
 
 # read ID from flags
-while getopts i:g:gp: flag; do
+while getopts i:g:gp:l: flag; do
   case "${flag}" in
   i) ID=${OPTARG} ;;
   g) GW=${OPTARG} ;;
   p) GWP=${OPTARG} ;;
+  l) P=${OPTARG} ;;
   *) ;;
   esac
 done

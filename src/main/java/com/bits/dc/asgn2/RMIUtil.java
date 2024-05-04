@@ -10,12 +10,12 @@ public class RMIUtil {
 	public static RmiInterface getRemoteConnection(String server) throws RemoteException, NotBoundException {
 		
 		String environment = System.getenv(server);
-        System.out.println("In RMIUtil: "+environment);
+        System.out.println("Seeking connection forCritical Section: "+environment);
         
         String hostname = environment.split(":")[0];
         
         int portnumber = Integer.parseInt(environment.split(":")[1]);
-        System.out.println("seeking connection on:" + environment);
+        System.out.println("seeking connection for file writing:" + environment);
         
         Registry myreg = LocateRegistry.getRegistry(hostname, portnumber);                
         RmiInterface inter = (RmiInterface)myreg.lookup("remoteObject");
