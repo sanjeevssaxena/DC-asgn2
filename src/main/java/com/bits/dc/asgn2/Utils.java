@@ -1,4 +1,4 @@
-package cz.cvut.fel.dsv;
+package com.bits.dc.asgn2;
 
 import java.util.Random;
 

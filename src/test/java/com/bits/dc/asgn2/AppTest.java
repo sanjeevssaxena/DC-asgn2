@@ -1,10 +1,12 @@
-package cz.cvut.fel.dsv;
+package com.bits.dc.asgn2;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+
+import com.bits.dc.asgn2.ID;
 
 import java.util.HashMap;
 import java.util.Objects;

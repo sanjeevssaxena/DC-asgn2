@@ -1,4 +1,4 @@
-package cz.cvut.fel.dsv;
+package com.bits.dc.asgn2;
 
 import java.io.Serializable;
 import java.rmi.Remote;

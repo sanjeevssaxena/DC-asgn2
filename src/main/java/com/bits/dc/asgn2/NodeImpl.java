@@ -1,4 +1,4 @@
-package cz.cvut.fel.dsv;
+package com.bits.dc.asgn2;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,7 +29,9 @@ public class NodeImpl extends UnicastRemoteObject implements Node, Runnable {
 
     private volatile Integer requestedVariable;
     private volatile Integer sharedVariable;
-
+    private String content = "default";
+    private String filename = "default.txt";
+    
     private int nMax;
     private Map<ID, Remote> remotes = new TreeMap<>();
 
@@ -308,7 +310,11 @@ public class NodeImpl extends UnicastRemoteObject implements Node, Runnable {
             }
 
             try {
-                requestedVariable = Integer.parseInt(line);
+                requestedVariable = Integer.parseInt(args[0]);
+                if(args.length >=3) {
+                	filename = args[1];
+                	content = args[2];
+                } 
             } catch (NumberFormatException e) {
                 log.error("failed to parse input string to int");
                 continue;
