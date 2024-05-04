@@ -70,7 +70,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>cz.cvut.fel.dsv.App</mainClass>
+                                <mainClass>com.bits.dc.asgn2.App</mainClass>
                             </manifest>
                         </archive>
                     </configuration>

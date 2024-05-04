@@ -214,6 +214,14 @@ public class NodeImpl extends UnicastRemoteObject implements Node, Runnable {
 
             log.info("{} HELD and changing variable {} to {} ...", strclk(), sharedVariable, requestedVariable);
             sharedVariable = requestedVariable;
+            
+            try {
+				RmiInterface intf = RMIUtil.getRemoteConnection("SERVER_PORT");
+				intf.uploadFileToServer(content.getBytes(),filename,content.length());
+			} catch (RemoteException | NotBoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         }
 
         try {
